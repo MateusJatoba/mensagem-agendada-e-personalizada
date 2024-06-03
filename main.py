@@ -9,7 +9,7 @@ def aplicacao():
     import webbrowser
     from urllib.parse import quote
 
-    TELEFONE = 71987233984
+    TELEFONE = 999999999
     mensagem = 'Pagar o INSS de Val'
     MENSAGEM = quote(mensagem)
     url = f'https://web.whatsapp.com/send?phone=55{TELEFONE}&text={MENSAGEM}'
@@ -25,14 +25,14 @@ def aplicacao():
 
 aplicacao()
 
-scheuler = apscheduler.schedulers.blocking.BlockingScheduler()
+# scheuler = apscheduler.schedulers.blocking.BlockingScheduler()
 
-scheuler.add_job(aplicacao, 'cron', day=3 , hour=16, minute=23)
+# scheuler.add_job(aplicacao, 'cron', day=3 , hour=16, minute=23)
 
-try:
-    print("Agendamento iniciado. A tarefa será executada no dia 3 de cada mês.")
-    scheuler.start()  
-except (KeyboardInterrupt, SystemExit):
-    print("Agendamento interrompido.")
+# try:
+#     print("Agendamento iniciado. A tarefa será executada no dia 3 de cada mês.")
+#     scheuler.start()  
+# except (KeyboardInterrupt, SystemExit):
+#     print("Agendamento interrompido.")
 
 
