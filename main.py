@@ -7,7 +7,7 @@ def aplicacao():
     import webbrowser
     from urllib.parse import quote
 
-    TELEFONE = 999451205
+    TELEFONE = 999999999
     mensagem = 'Pagar o INSS de Val'
     MENSAGEM = quote(mensagem)
     url = f'https://web.whatsapp.com/send?phone=55{TELEFONE}&text={MENSAGEM}'
